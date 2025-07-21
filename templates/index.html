@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🖐️ Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <h1>👊 Realistic Rock Paper Scissors</h1>
+        <p class="subtitle">Make your move!</p>
+
+        <form method="post" class="choice-form">
+            <button name="choice" value="r">✊ Rock</button>
+            <button name="choice" value="p">✋ Paper</button>
+            <button name="choice" value="s">✌️ Scissor</button>
+        </form>
+
+        {% if result %}
+        <div class="hands-display">
+            <div class="player-hand">
+                <p>You</p>
+                <div class="hand-icon">
+                    {% if user == "Rock" %}
+                        ✊
+                    {% elif user == "Paper" %}
+                        ✋
+                    {% elif user == "Scissor" %}
+                        ✌️
+                    {% endif %}
+                </div>
+            </div>
+            <div class="vs-text">VS</div>
+            <div class="computer-hand">
+                <p>Computer</p>
+                <div class="hand-icon">
+                    {% if computer == "Rock" %}
+                        ✊
+                    {% elif computer == "Paper" %}
+                        ✋
+                    {% elif computer == "Scissor" %}
+                        ✌️
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <h2 class="result">{{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

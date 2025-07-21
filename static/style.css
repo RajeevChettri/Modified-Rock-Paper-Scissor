@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: radial-gradient(circle, #1f1c2c, #928dab);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.choice-form button {
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.choice-form button:hover {
+    background-color: #00f2fe;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.hands-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.player-hand, .computer-hand {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.hand-icon {
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+.vs-text {
+    font-size: 2rem;
+    margin: 0 20px;
+    font-weight: bold;
+    color: #ffda79;
+}
+
+.result {
+    margin-top: 25px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
